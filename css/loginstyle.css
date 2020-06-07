@@ -1,0 +1,82 @@
+/*Diseño General */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-image: url("../img/Fondologin.jpg");
+    background-size: cover;
+    width: 100%;
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+} 
+
+/*Letras*/
+h1 {
+    font-size: 80px;
+    font-family: 'Suez One', serif;
+}
+span {
+    font-family: 'Oswald', sans-serif;
+}
+p {
+    color: #76d0d4;
+} 
+
+/* Containers */
+.container-titulo {
+    color: #76d0d4;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+.container-form {
+    margin-top: 78px;
+    width: 48%;
+    padding-top: 10px;
+    padding-left: 180px;
+    /*border: solid 2px lightgray;*/
+    text-align: center;
+}
+.container-redes {
+    margin-top: 74px;
+    width: 48%;
+    padding-right: 180px;
+    padding-top: 10px;
+    /*border: solid 2px lightgray;*/
+    text-align: center;
+}
+
+/* Inputs */ 
+.input-email , .input-pass {
+    height: 38px;
+    border-radius: 10px;
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 50px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    span {
+      font-size: 18px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .container-form , .container-redes {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
