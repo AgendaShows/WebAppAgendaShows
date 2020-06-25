@@ -5,12 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda Shows UADE Diploma</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header></header>
+<!--ACA ARRANCA FUNCIONALIDAD-HEADER LAU-->
+    <header>
+        <div class="container-fluid container-header">
+            <div class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+                <!--inserto imagen de nota musical a modo de logo-->
+                <svg class="bi bi-music-note-list" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z" />
+                    <path fill-rule="evenodd" d="M12 3v10h-1V3h1z" />
+                    <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z" />
+                    <path fill-rule="evenodd"
+                        d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z" />
+                </svg>
+                <a class="navbar-brand" href="#">Nombre de página</a>
+                <div id="barraDeNavegacion mr-auto">
+                    <!--Pruebo botones de bootstrap con selector fachero-->
+                    <div class="btn-group btn-group-toggle nav-item" data-toggle="buttons">
+                        <!--botones-->
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="options" id="option1" checked> INICIO
+                            <!--CHECKED (CAMBIA LA SELECCIÓN)
+                                                            Method: $().button('toggle')
+                                                            description: Toggles push state. Gives the button the appearance that it has been activated.-->
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option2"> INTERNACIONAL
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option3"> NACIONAL
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option4"> UNDER/INDIE
+                        </label>
+                        <!--Barra de busqueda de bootstrap con borrado integrado-->
+                        <form class="buscador">
+                            <input id="barraBusqueda" class="form-control mr-ms-2" type="search" placeholder="Buscar"
+                                aria-label="Search">
+                        </form>
+                        <!--inserto imagen de lupa-->
+                        <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                            <path fill-rule="evenodd"
+                                d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        </svg>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--ACA TERMINA FUNCIONALIDAD-HEADER LAU-->
+
     <nav></nav>
     <main>
         <article></article>
