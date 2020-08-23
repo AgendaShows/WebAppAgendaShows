@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda de conciertos, recitales, shows en buenos aires, buscador de eventos, eventos 
+    filtros, musica, bandas, under, mainstream"> 
+    <!-- Icon -->
+    <link rel="shorcut icon" type="image/x-icon" href="img/boleto.ico">
     <!--Boostrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/bootstraplogin.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="css/loginstyle.css">
-    <title>Welcome to FindConcerts!</title>
+    <title>Bienvenidos a FindConcerts!</title>
 </head>
 
 <body>
@@ -26,37 +30,42 @@
             </div>
             <!--Contanier Formulario-->
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 container-form">
-                <input type="email" class="input-email" name="email" placeholder="Email" size="34">
-                <br>
-                <br>
-                <input type="text" class="input-pass" name="password" placeholder="Contraseña" size="34">
-                <small id="passHelp" class="form-text text-muted"><strong>Minimo 8 caractes, sin espacios ni guiones</strong></small>
-                <br>
-                <button type="button" class="btn btn-outline-primary btn-lg"><a href="home.html">Log In!</a></button>
-                <br>
-                <br>
-                <p><strong>Olvidaste tu contraseña ?</strong> <a href="#">Haz click aqui.</a></p>
+                <form> 
+                    <div class="form-group">
+                      <label for="Email" class="etiqueta">E-Mail</label>
+                      <input type="emai" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Ingresa tu Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="Password" class="etiqueta">Contraseña</label>
+                      <input type="password" class="form-control" id="Password" placeholder="Contraseña">
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Registrate</button>
+                  </form>
             </div>
-            <!--Contanier Login Redes-->
+            <!--Contanier Login-Redes-->
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 container-redes">
-                <a href="#" class="btn btn-lg btn-social btn-facebook"><span class="fa fa-facebook"></span>Inicia con
-                    Facebook</a>
+                <a href="#" class="btn btn-lg btn-social btn-facebook">
+                    <span class="fa fa-facebook"></span>Inicia con Facebook
+                </a>
                 <br>
                 <br>
-                <a href="#" class="btn btn-lg btn-social btn-twitter"><span class="fa fa-twitter"></span>Inicia
-                    con Twitter</a>
+                <a href="#" class="btn btn-lg btn-social btn-twitter">
+                    <span class="fa fa-twitter"></span>Inicia con Twitter
+                </a>
                 <br>
                 <br>
-                <a href="#" class="btn btn-lg btn-social btn-google "><span class="fa fa-google"></span>Inicia con
-                    Google</a>
+                <a href="#" class="btn btn-lg btn-social btn-google ">
+                    <span class="fa fa-google"></span>Inicia con Google
+                </a>
             </div>
         </div>
     </div>
-
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f4ee5663d2.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
-
 
 
 
