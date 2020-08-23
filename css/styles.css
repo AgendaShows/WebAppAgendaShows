@@ -1,4 +1,9 @@
-/*NAV BAR CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*HEADER CSS*/
 .container-header {
     width: 100%;
     padding-right: 0;
@@ -6,41 +11,82 @@
     margin-right: auto;
     margin-left: auto;   
 }
+.logoNombre{
+    display: flex;
+    align-items: center;
+}
+.logotipo{
+    font-size:25px;
+    color: white;
+    margin-right:10px;
+    margin-left:10px;   
+}
+.navbar-brand{
+    padding-left: 5px;
+    font-size: 25px;
+}
 #barraDeNavegacion {
     height: 35px;
-    opacity: 75%;
-    background-color:#393e46;
-    width: 100vw;
 }
 .nav-item{
-    padding-left:50px;
-    font-weight:100;
+    padding-left:30px;
+    font-weight: 100;
 }
 .options{
-    padding-left:10%;;
+    padding-left:10%;
 }
-.buscador{
-    padding-left: 75px;
+.btn-secondary:hover {
+    text-decoration: underline;
+}
+.busqueda{
+    display: flex;
+    align-items: center;
+}
+.buscador {
+    padding-left:75px;
+    /*border: solid violet 2px;
+    margin: auto;*/
 }
 #barraBusqueda{
     width:400px;
+    margin: auto;
 }
-.bi-music-note-list{
-    margin-top:4px;
-    margin-right:20px;
-    margin-left: 20px;
-    height: 30px;
-    width: 30px;
-    float: left;
-    color: beige;
+.lupa{
+    font-size: 25px;
+    color: white;
+    margin-left:10px;
 }
-.bi-search{
-    margin-left: 20px;
-    margin-top:4px;
-    height: 30px;
-    width: 30px;
-    float: left;
-    color: beige;
+/*Cierro CSS HEADER*/
+
+/*INICIO CSS SIDEBAR*/
+.sidebar {
+    background-color: #343a40;
+    text-align: center;
+    width: 280px;
+    height: 100%;
 }
-/*Cierro CSS NAVBAR*/
-/*me falta el nav*/
+#sidebarFija ul li{
+    font-size: 100;
+    color: white;
+    list-style-type: none;
+    margin: 5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.fotoPerfil {
+    height: 170px;
+    width: 170px;
+    border-radius: 90%;
+}
+ul{
+    margin-top: 15px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.map{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height:204px;
+    width: 128px;
+}
+/*cierro css sidebar*/
