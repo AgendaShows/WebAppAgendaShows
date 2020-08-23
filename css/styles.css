@@ -37,11 +37,19 @@
 }
 .btn-secondary:hover {
     text-decoration: underline;
+<<<<<<< HEAD
 }
 .busqueda{
     display: flex;
     align-items: center;
 }
+=======
+}
+.busqueda{
+    display: flex;
+    align-items: center;
+}
+>>>>>>> 57edee3fb3a5cffcc16e4a04808d2d2569ff9568
 .buscador {
     padding-left:75px;
     /*border: solid violet 2px;
@@ -88,6 +96,7 @@ ul{
     margin-bottom: 20px;
     height:204px;
     width: 128px;
+<<<<<<< HEAD
 }
 /*cierro css sidebar*/
 /*Aside*/
@@ -129,3 +138,7 @@ footer {
     justify-content: center;
   }
 }
+=======
+}
+/*cierro css sidebar*/
+>>>>>>> 57edee3fb3a5cffcc16e4a04808d2d2569ff9568
