@@ -30,18 +30,23 @@
             </div>
             <!--Contanier Formulario-->
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 container-form">
-                <form> 
+                <form action="/user/login" method="POST" id="form"> 
                     <div class="form-group">
-                      <label for="Email" class="etiqueta">E-Mail</label>
-                      <input type="emai" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Ingresa tu Email">
+                      <label for="email" class="etiqueta">E-Mail</label>
+                      <input type="emai" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingresa tu Email" required>
                     </div>
                     <div class="form-group">
-                      <label for="Password" class="etiqueta">Contraseña</label>
-                      <input type="password" class="form-control" id="Password" placeholder="Contraseña">
+                      <label for="password" class="etiqueta">Contraseña</label>
+                      <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary">Registrate</button>
+                    <button type="submit" id="boton-inicia" class="btn btn-primary">Inicia Sesion</button>
                   </form>
+                  <div class="col-12 registro">
+                    <span class="texto">¿No sos usuario? ¡Registrate!</span>
+                    <br>
+                    <a href="sing-up.html"><button type="click" id="boton-registrate" class="btn btn-success">Registrate</button></a>
+                </div>
             </div>
             <!--Contanier Login-Redes-->
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 container-redes">
@@ -63,6 +68,8 @@
     </div>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f4ee5663d2.js" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script  type="text/javascript" src="js/sing-in.js"></script>
 </body>
 
 </html>

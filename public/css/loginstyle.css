@@ -29,19 +29,30 @@ label {
   text-align: center;
   font-size: 35px;
 }
+.texto {
+  color: #fff;
+}
+.registro {
+  margin-top: 15px;
+}
 .container-form {
-  margin-top: 55px;
+  margin-top: 40px;
   width: 48%;
   padding-top: 10px;
   padding-left: 180px;
   text-align: center;
 }
 .container-redes {
-  margin-top: 74px;
+  margin-top: 50px;
   width: 48%;
   padding-right: 180px;
   padding-top: 10px;
   text-align: center;
+}
+
+/* Buttons */
+.btn-twitter, .btn-google {
+  margin-top: 10px;
 }
 
 /*Media Queries*/

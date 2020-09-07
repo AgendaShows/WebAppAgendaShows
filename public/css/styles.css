@@ -104,7 +104,6 @@ ul{
 /*Footer*/
 footer {
   background-color: #393e46;
-  position: fixed;
   bottom: 0;
   width: 100%;
   height: 50px;
@@ -121,10 +120,7 @@ footer {
 
 /* Footer */
 
-@media only screen and (max-width: 720px) {
-  footer {
-      position: fixed;
-  }  
+@media only screen and (max-width: 720px) { 
   .social-icons {
     justify-content: center;
   }
