@@ -4,16 +4,10 @@
     box-sizing: border-box;
 }
 /*HEADER CSS*/
-.container-header {
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: auto;
-    margin-left: auto;   
-}
 .logoNombre{
     display: flex;
     align-items: center;
+    margin-left: 19px;
 }
 .logotipo{
     font-size:25px;
@@ -26,35 +20,19 @@
     font-size: 25px;
 }
 #barraDeNavegacion {
-    height: 35px;
+    padding-left: 30px;
 }
-.nav-item{
-    padding-left:30px;
-    font-weight: 100;
+.lista {
+    border: none;
 }
-.options{
-    padding-left:10%;
-}
-.btn-secondary:hover {
-    text-decoration: underline;
-}
-.busqueda{
+.lista li {
     display: flex;
-    align-items: center;
 }
-.buscador {
-    padding-left:75px;
-    /*border: solid violet 2px;
-    margin: auto;*/
+.lista li a {
+    font-size: 20px;
 }
-#barraBusqueda{
-    width:400px;
-    margin: auto;
-}
-.lupa{
-    font-size: 25px;
-    color: white;
-    margin-left:10px;
+.form-inline {
+    margin-right: 40px;
 }
 /*Cierro CSS HEADER*/
 
@@ -90,13 +68,52 @@ ul{
     width: 128px;
 }
 /*cierro css sidebar*/
+
+/* Main */
+.container-main {
+    border: 2px solid grey;
+    margin-top: 10px;
+    margin: 10px 0px 10px 50px;
+}
+.lista-main {
+    display: flex;
+    justify-content: center;
+}
+.lista-main a {
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    margin: 0 50px;
+    border-bottom: 2px solid transparent;
+}
+.lista-main a:hover {
+    border-bottom: 2px solid #000000;
+}
+.band-card {
+    border: 2px solid grey;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+.boton-cards {
+    margin-top: 10px;
+}
 /*Aside*/
 .div-aside {
     border: solid 2px grey;
-    background-color: #04BFBF;
+    margin: 10px 6px 10px 50px;
+}
+.div-aside .titulo-aside {
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    align-items: center;
 }
 .destacados {
     color: #ffffff;
+    text-align: center;
+}
+.bands {
+    border: 1px solid grey;
     text-align: center;
 }
 
@@ -108,6 +125,7 @@ footer {
   width: 100%;
   height: 50px;
 }
+/* 04BFBF */
 .container-footer {
   padding-top: 7px;
 }
@@ -116,12 +134,27 @@ footer {
 }
 
 /* Media Queries*/
+/* Navbar */
+@media only screen and (max-width: 720px) { 
+    .lista li a {
+        margin: 5px 0;
+        font-size: 20px;
+    }
+    .form-inline button {
+        margin-top: 10px;
+    }
+}
 
+/* Main */
+@media only screen and (max-width: 720px) { 
+    .container-main, .div-aside {
+        margin: 10px 0px 10px 0px;
+    }
+}
 
 /* Footer */
-
 @media only screen and (max-width: 720px) { 
-  .social-icons {
-    justify-content: center;
-  }
+    .social-icons {
+        justify-content: center;
+    }
 }

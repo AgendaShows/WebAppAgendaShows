@@ -4,85 +4,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda Shows UADE Diploma</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="description" content="Agenda de conciertos, recitales, shows en buenos aires, buscador de eventos, eventos 
+    filtros, musica, bandas, under, mainstream">
+    <!-- Icon -->
+    <link rel="shorcut icon" type="image/x-icon" href="img/Home Icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Concerts, tus conciertos en un solo lugar</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!--ACA ARRANCA FUNCIONALIDAD-HEADER LAU-->
+    <!-- Navbar -->
     <header>
-        <div class="container-header">
-            <div class="navbar navbar-nav navbar-expand-xl navbar-dark bg-dark sticky-top">
-                <!--inserto imagen de nota musical a modo de logo-->
-                <div class="logoNombre">
-                    <a class="logotipo" href="#">
-                        <i class="fas fa-music"></i>
-                    </a>
-                    <a class="navbar-brand" href="#">FIND CONCERTS</a>
+        <nav class="navbar navbar-nav navbar-expand-xl navbar-dark bg-dark sticky-top">
+            <!--Inserto imagen de nota musical a modo de logo-->
+            <div class="logoNombre">
+                <a class="logotipo" href="#">
+                    <i class="fas fa-music"></i>
+                </a>
+                <a class="navbar-brand" href="#">FIND CONCERTS</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barraDeNavegacion"
+                aria-controls="barraDeNavegacion" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Pruebo botones de bootstrap con selector fachero-->
+            <div class="navbar-collapse collapse" id="barraDeNavegacion">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 lista">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light" href="#">Artistas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light" href="#">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light" href="#">Filtrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light" href="#">Recomendados</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Introduci tu busqueda"
+                        aria-label="Search">
+                    <button class="btn btn-warning my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar -->
+    <!-- Main -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-2 sidebar bg-dark" id="sidebarFija">
+                    <img src="img/FotoPerfil.jpg" alt="Foto de Perfil" class="fotoPerfil">
+                    <ul>
+                        <a href="#"><li>Mi Cuenta</li></a>
+                        <a href="#"><li>Explorar</li></a>
+                        <a href="#"><li>Artistas Favoritos</li></a>
+                        <a href="#"><li>Mis Conciertos</li></a>
+                        <a href="#"><li>Deslogeo</li></a>
+                        <a href="#"><li>Opciones</li></a>
+                    </ul>
+                    <img src="img/Mapa.jpg" alt="MAPA" class="map">
                 </div>
-                <div id="barraDeNavegacion mr-auto">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barraDeNavegacion" aria-controls="barraDeNavegacion" aria-expanded="true" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <!--Pruebo botones de bootstrap con selector fachero-->
-                    <div class="navbar-collapse collapse" id="barraDeNavegacion">
-                        <div class="btn-group btn-group-toggle nav-item">
-                            <!--botones-->
-                            <label class="btn btn-secondary active">
-                                <input type="radio" name="options" id="option1" checked> INICIO
-                            </label>
-                            <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option2"> INTERNACIONAL
-                            </label>
-                            <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option3"> NACIONAL
-                            </label>
-                            <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option4"> UNDER/INDIE
-                            </label>
-                            <!--Barra de busqueda de bootstrap con borrado integrado-->
-                            <div class="busqueda">
-                                <form class="buscador">
-                                    <input id="barraBusqueda" class="form-control mr-ms-2" type="search" placeholder="Buscar" aria-label="Search">
-                                </form>
-                                <!--inserto imagen de lupa-->
-                                <a class="lupa" href="#">
-                                    <i class="lupa fas fa-search"></i>
-                                </a>
+                <!--ACA TERMINA FUNCIONALIDAD NAV O SIDEBAR LAU-->
+                <div class="col-12 col-lg-5 container-main">
+                    <ul class="lista-main">
+                        <a href="#"><li>Hoy</li></a>
+                        <a href="#"><li>Esta Semana</li></a>
+                        <a href="#"><li>Este Mes</li></a>
+                    </ul>
+                    <div class="col-12 band-card">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <h4>Metallica</h4>
+                                <p>Internacional</p>
                             </div>
+                            <div class="col-12 col-lg-8 card-1">
+                                <textarea name="descripcion" placeholder="Descripcion"></textarea>
+                                <div class="row">
+                                    <div class="col-4 boton-cards">
+                                        <button type="button" class="btn btn-dark">MAS</button>
+                                    </div>
+                                    <div class="col-4 boton-cards">
+                                        <button type="button" class="btn btn-dark">LIKE</button>
+                                    </div>
+                                    <div class="col-4 boton-cards">
+                                        <button type="button" class="btn btn-dark">PRECIO</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 band-card">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <h4>Metallica</h4>
+                                <p>Internacional</p>
+                            </div>
+                            <div class="col-12 col-lg-8 card-2">
+                                <textarea name="descripcion" placeholder="Descripcion"></textarea>
+                                <div class="row">
+                                    <div class="col-4 boton-cards">
+                                        <button type="button" class="btn btn-dark">MAS</button>
+                                    </div>
+                                    <div class="col-4 boton-cards">
+                                        <button type="button" class="btn btn-dark">LIKE</button>
+                                    </div>
+                                    <div class="col-4 boton-cards">
+                                        <button type="button" class="btn btn-dark">PRECIO</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 band-card">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <h4>Metallica</h4>
+                                <p>Internacional</p>
+                            </div>
+                            <div class="col-12 col-lg-8 card-3">
+                                <textarea name="descripcion" placeholder="Descripcion"></textarea>
+                                <div class="row">
+                                    <div class="col-4 boton-cards">
+                                        <button type="button" class="btn btn-dark">MAS</button>
+                                    </div>
+                                    <div class="col-4 boton-cards">
+                                        <button type="button" class="btn btn-dark">LIKE</button>
+                                    </div>
+                                    <div class="col-4 boton-cards">
+                                        <button type="button" class="btn btn-dark">PRECIO</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Aca empieza trabajo de Fede -->
+                <div class="col-12 col-lg-4 div-aside">
+                    <div class="titulo-aside">
+                        <i class="fas fa-arrow-down flecha"></i>
+                        <span class="seccion">Destacados</span>
+                        <i class="fas fa-arrow-down flecha"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 bands banda1">
+                            <h6>Hola Banda</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6 bands banda2">
+                            <h6>Hola Banda</h6>
+                        </div>
+                        <div class="col-12 col-lg-6 bands banda3">
+                            <h6>Hola Banda</h6>
+                        </div>
+                        <div class="col-12 col-lg-6 bands banda4">
+                            <h6>Hola Banda</h6>
+                        </div>
+                        <div class="col-12 col-lg-6 bands banda5">
+                            <h6>Hola Banda</h6>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <!--ACA TERMINA FUNCIONALIDAD-HEADER LAU-->
-    <!--INICIO EL NAV O SIDEBAR LAU-->
-    <section>
-        <div class="sidebar bg-dark" id="sidebarFija">
-            <img src="img/FotoPerfil.jpg" alt="Foto de Perfil" class="fotoPerfil">
-            <ul>
-                <li>Mi Cuenta</li>
-                <li>Explorar</li>
-                <li>Artistas Favoritos</li>
-                <li>Mis Conciertos</li>
-                <li>Deslogeo</li>
-                <li>Opciones</li>
-            </ul>
-            <img src="img/Mapa.jpg" alt="MAPA" class="map">
-        </div>
     </section>
-    <!--ACA TERMINA FUNCIONALIDAD NAV O SIDEBAR LAU-->
-    <main>
-        <article></article>
-    </main>
-    <!-- Aca empieza trabajo de Fede -->
-    <div class="col-12 col-lg-3 div-aside">
-        <aside>
-            <span class="destacados"><strong>Destacados</strong></span>
-        </aside>
-    </div>
+    <!-- Main -->
     <!-- Footer -->
     <footer>
         <div class="container-fluid container-footer">
@@ -107,6 +205,17 @@
     </footer>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f4ee5663d2.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript Principal -->
     <script src="js/principal.js"></script>
 </body>
 
