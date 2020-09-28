@@ -90,3 +90,38 @@ ul{
     width: 128px;
 }
 /*cierro css sidebar*/
+/*Aside*/
+.div-aside {
+    border: solid 2px grey;
+    background-color: #04BFBF;
+}
+.destacados {
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/*Footer*/
+footer {
+  background-color: #393e46;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+.container-footer {
+  padding-top: 7px;
+}
+.container-footer .social-icons a {
+  margin-left: 20px;
+}
+
+/* Media Queries*/
+
+
+/* Footer */
+
+@media only screen and (max-width: 720px) { 
+  .social-icons {
+    justify-content: center;
+  }
+}

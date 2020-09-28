@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda de conciertos, recitales, shows en buenos aires, buscador de eventos, eventos 
+    filtros, musica, bandas, under, mainstream"> 
+    <!-- Icon -->
+    <link rel="shorcut icon" type="image/x-icon" href="img/boleto.ico">
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="css/sing-up.css">
+    <title>Registrate en FindConcerts!</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!--Title-->
+            <div class="col-12 container-titulo">
+                <h1>Registrate</h1>
+            </div>
+            <!--Contanier Formulario-->
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 container-form">
+                <form action="/user/singup" method="POST" id="form"> 
+                    <div class="form-group">
+                        <label for="text" class="etiqueta">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Ingresa tu Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="text" class="etiqueta">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" aria-describedby="emailHelp" placeholder="Ingresa tu Apellido" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="etiqueta">E-Mail</label>
+                      <input type="emai" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingresa tu Email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="etiqueta">Contraseña</label>
+                      <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                    </div>
+                    <br>
+                    <button type="submit" id="registrate" class="btn btn-block btn-success">Registrarse</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <!-- Custom JavaScript -->
+    <script  type="text/javascript" src="js/sing-up.js"></script>
+</body>
+
+</html>

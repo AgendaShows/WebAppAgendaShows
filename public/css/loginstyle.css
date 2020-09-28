@@ -1,0 +1,87 @@
+/*Diseño General */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-image: url("../img/FondoFinal.jpg");
+  background-size: cover;
+}
+
+/*Letras*/
+h1 {
+  font-size: 80px;
+  font-family: 'Suez One', serif;
+}
+span {
+  font-family: 'Oswald', sans-serif;
+}
+label {
+  color: #ffffff;
+  font-size: 18px;
+} 
+
+/* Containers */
+.container-titulo {
+  color: #76d0d4;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 35px;
+}
+.texto {
+  color: #fff;
+}
+.registro {
+  margin-top: 15px;
+}
+.container-form {
+  margin-top: 40px;
+  width: 48%;
+  padding-top: 10px;
+  padding-left: 180px;
+  text-align: center;
+}
+.container-redes {
+  margin-top: 50px;
+  width: 48%;
+  padding-right: 180px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn-twitter, .btn-google {
+  margin-top: 10px;
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 900px) {
+  body {
+      background-position: center center;
+      background-size: auto;
+  }
+
+  .container-form , .container-redes {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  span {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-form , .container-redes {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
