@@ -23,7 +23,9 @@ const UserSchema = mongoose.Schema ({
         type: Date,
         default: Date.now()
     } 
+}, {
+    collection: 'Users'
 }); 
 
 // Exporto el modelo de usuario con el Schema
-module.exports = mongoose.model("user", UserSchema);
+module.exports = mongoose.model("Users", UserSchema);

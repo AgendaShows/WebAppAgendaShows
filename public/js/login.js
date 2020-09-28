@@ -1,4 +1,4 @@
-// Clase que va a manejar los eventos del DOM
+// Clases para manipular el DOM 
 class UI {
     static mostrarAlerta(mensaje, className){
         // Creo el div que va a mostrarme la alerta
@@ -16,28 +16,24 @@ class UI {
     }
 
     static limpiarCampos(){
-        document.querySelector('#nombre').value = '';
-        document.querySelector('#apellido').value = '';
         document.querySelector('#email').value = '';
-        document.querySelector('#password').value = '';
+        document.querySelector('#password').value = ''; //
     }
 }
 
 // Funcion de envio
-registrate = (e) => {
+iniciaSesion = (e) => {
     e.preventDefault();
     // Declaro la constante
-    const host = 'http://localhost:3000/user/singup';
+    const host = 'http://localhost:3000/user/login';
 
     // Declaro una constante que va a obtener los valores de los inputs
     const form = {
-        nombre: document.getElementById("nombre").value,
-        apellido: document.getElementById("apellido").value,
         email: document.getElementById("email").value,
         password: document.getElementById("password").value
     };
 
-    if (form.nombre === '', form.apellido === '', form.email === '', form.password === ''){
+    if (form.email === '', form.password === ''){
         UI.mostrarAlerta('Por favor, ingrese todos los datos', 'danger');
     } else { 
         // Declaro su end-point, metodo + envio en JSON
@@ -48,17 +44,17 @@ registrate = (e) => {
             'Content-type': 'application/json'
         }
         }).then((response) => {
-            // Declaro una variable que va a contener el estado
+            // Declaro una variable para tener mi status 
             let estado = response.status;
-            // Si es codigo 200, me redirige al login, de lo contrario muestra error
-            if (estado === 201) {
-                UI.mostrarAlerta('Registro Exitoso', 'success');
+            // Condicional, compruebo si es 200, inicie. De lo contrario, arrojo una alerta
+            if (estado === 200) {
+                UI.mostrarAlerta('Iniciando Sesion..', 'success');
                 UI.limpiarCampos();
                 setTimeout(() => {
-                    window.location.replace("index.html");
+                    window.location.replace("home.html");
                 }, 1000); 
             } else { 
-                UI.mostrarAlerta('Intente nuevamente', 'danger');
+                UI.mostrarAlerta('Revise sus credenciales', 'danger');
             };
         }).catch((error) => {
             console.error(error);
@@ -67,4 +63,4 @@ registrate = (e) => {
 };
 
 // Llamo al boton y le agrego su evento y defino la funcion
-document.getElementById("registrate").addEventListener('click', registrate);
+document.getElementById("boton-inicia").addEventListener('click', iniciaSesion);

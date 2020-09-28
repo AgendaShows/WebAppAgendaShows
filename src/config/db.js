@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 // Declaro la URL de mi DB
-const mongoURL = "mongodb+srv://root:2208Mega.@cluster0.lxbo6.mongodb.net/Testing";
+const mongoURL = "mongodb+srv://root:2208Mega.@cluster0.lxbo6.mongodb.net/WebAppAgendaShowsTest";
 
 // Conecto con Mongo declarando una funcion
 const connectWithMongo = () => {
@@ -12,7 +12,7 @@ const connectWithMongo = () => {
         useUnifiedTopology: true
     }, (err, db) => {
         if (err) throw err;
-        console.log("Conectado a Mongo.");
+        console.log("Conectado a DB");
       }
     );
   };
