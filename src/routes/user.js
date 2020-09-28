@@ -6,7 +6,8 @@ const jwt = require("jsonwebtoken");
 const router = express.Router();
 
 // Requiero la carpeta de modelos y la guardo en una constante
-const User = require("../models/User");
+const User = require("../models/Users");
+const auth = require("../middleware/autenticacion");
 
 /**********************
  * POST 
@@ -32,7 +33,7 @@ router.post( "/singup", [
             // Si existe, retorna mensaje de que ese usuario ya existe
             if (user) {
                 return res.status(400).json({
-                    msg: "Usuario ya existente"
+                    message: "Usuario ya existente"
                 });
             }
 
@@ -62,8 +63,9 @@ router.post( "/singup", [
                     expiresIn: 10000
                 }, (err, token) => {
                     if (err) throw err;
-                    res.status(200).json({
-                        token
+                    res.status(201).json({
+                        token,
+                        message: "Registro exitoso"
                     });
                 }
             );
@@ -130,6 +132,22 @@ router.post("/login", [
         console.log(e);
         res.status(500).json({
             message: "Error de servidor"
+        });
+    }
+ });
+
+ /**********************
+ * GET 
+ * Login de Usuario
+ **********************/
+
+ router.get("/me", auth, async (req,res) => {
+    try {
+        const user = await User.findById(req.user.id);
+        res.json(user);
+    } catch (error) {
+        res.send({
+            message: "Error en el inicio de sesion"
         });
     }
  });
