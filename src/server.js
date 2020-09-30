@@ -14,6 +14,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const connectWithMongo = require("./config/db"); // Llamo a la configuracion de conexion a la DB
 const user = require("./routes/user"); // Llamo al modelo de usuarios
+const puntoVenta = require("./routes/puntos_de_venta"); //Llamo al modelo punto_de_venta
+const locacion = require("./routes/locaciones"); //Llamo al modelo locaciones
 
 // Inicios
 connectWithMongo();
@@ -37,6 +39,8 @@ app.get("/", (req,res) => {
 });
 
 app.use("/user", user);
+app.use("/point", puntoVenta);
+app.use("/location", locacion);
 
 app.listen(PORT, (req,res) => {
     console.log(`Server iniciado en puerto ${PORT}`);
