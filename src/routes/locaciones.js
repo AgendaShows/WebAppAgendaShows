@@ -4,7 +4,7 @@ const router = express.Router();
 
 //Modelo de Schema y Middleware
 const locaciones = require("../models/Locaciones");
-const locationId = require("../middleware/idFinder");
+const locationId = require("../middleware/locationId");
 
 /******
  * POST

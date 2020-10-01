@@ -4,7 +4,7 @@ const router = express.Router();
 
 //Modelo de Schema y Middleware
 const puntoVenta = require("../models/Puntos_de_Venta");
-const pointId = require("../middleware/idFinder");
+const pointId = require("../middleware/pointId");
 
 /******
  * POST

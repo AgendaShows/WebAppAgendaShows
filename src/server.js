@@ -16,7 +16,8 @@ const connectWithMongo = require("./config/db"); // Llamo a la configuracion de 
 const user = require("./routes/user"); // Llamo al modelo de usuarios
 const puntoVenta = require("./routes/puntos_de_venta"); //Llamo al modelo punto_de_venta
 const locacion = require("./routes/locaciones"); //Llamo al modelo locaciones
-const recital = require("./routes/recitales"); //Llamo al modelo locaciones
+const recital = require("./routes/recitales"); //Llamo al modelo recitales
+const banda = require("./routes/bandas"); //Llamo al modelo de banda
 
 // Inicios
 connectWithMongo();
@@ -39,10 +40,12 @@ app.get("/", (req,res) => {
     });
 });
 
+//Endpoints CRUDS
 app.use("/user", user);
 app.use("/point", puntoVenta);
 app.use("/location", locacion);
 app.use("/show", recital);
+app.use("/banda", banda);
 
 app.listen(PORT, (req,res) => {
     console.log(`Server iniciado en puerto ${PORT}`);

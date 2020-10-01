@@ -4,7 +4,7 @@ const router = express.Router();
 
 //Modelo de Schema y Middleware
 const recitales = require("../models/Recitales");
-const showsId = require("../middleware/idFinder");
+const showsId = require("../middleware/showsId");
 
 /******
  * POST
