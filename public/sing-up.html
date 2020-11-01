@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Agenda de conciertos, recitales, shows en buenos aires, buscador de eventos, eventos 
-    filtros, musica, bandas, under, mainstream"> 
+    filtros, musica, bandas, under, mainstream">
     <!-- Icon -->
     <link rel="shorcut icon" type="image/x-icon" href="img/boleto.ico">
     <!--Boostrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
@@ -28,31 +28,56 @@
             </div>
             <!--Contanier Formulario-->
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 container-form">
-                <form action="/user/singup" method="POST" id="form"> 
+                <form action="/user/singup" method="POST" id="form">
                     <div class="form-group">
                         <label for="text" class="etiqueta">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Ingresa tu Nombre" required>
+                        <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp"
+                            placeholder="Ingresa tu Nombre" required>
                     </div>
                     <div class="form-group">
                         <label for="text" class="etiqueta">Apellido</label>
-                        <input type="text" class="form-control" id="apellido" aria-describedby="emailHelp" placeholder="Ingresa tu Apellido" required>
+                        <input type="text" class="form-control" id="apellido" aria-describedby="emailHelp"
+                            placeholder="Ingresa tu Apellido" required>
                     </div>
                     <div class="form-group">
-                      <label for="email" class="etiqueta">E-Mail</label>
-                      <input type="emai" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingresa tu Email" required>
+                        <label for="email" class="etiqueta">E-Mail</label>
+                        <input type="emai" class="form-control" id="email" aria-describedby="emailHelp"
+                            placeholder="Ingresa tu Email" required>
                     </div>
                     <div class="form-group">
-                      <label for="password" class="etiqueta">Contraseña</label>
-                      <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                        <label for="password" class="etiqueta">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                    </div>
+                    <div class="dropdown show">
+                        <a class="btn btn-block btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ¿Con que estilo te identificas?
+                        </a>
+                        <div class="dropdown-menu" id="estilo" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item selection" href="#" >Rock</a>
+                            <a class="dropdown-item selection" href="#" >Pop</a>
+                            <a class="dropdown-item selection" href="#" >Heavy Metal</a>
+                            <a class="dropdown-item selection" href="#" >Electro</a>
+                            <a class="dropdown-item selection" href="#" >Trap</a>
+                        </div>
                     </div>
                     <br>
                     <button type="submit" id="registrate" class="btn btn-block btn-success">Registrarse</button>
-                  </form>
+                </form>
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <!-- Custom JavaScript -->
-    <script  type="text/javascript" src="js/sing-up.js"></script>
+    <script type="text/javascript" src="js/sing-up.js"></script>
 </body>
 
 </html>

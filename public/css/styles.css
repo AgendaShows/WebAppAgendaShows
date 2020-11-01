@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    clear: both;
 }
 /*HEADER CSS*/
 .logoNombre{
@@ -41,7 +42,11 @@
     background-color: #343a40;
     text-align: center;
     width: 280px;
-    height: 100%;
+    height: auto;
+}
+#sidebarFija a {
+    list-style: none;
+    text-decoration: none;
 }
 #sidebarFija ul li{
     font-size: 100;
@@ -50,6 +55,9 @@
     margin: 5px;
     padding-top: 5px;
     padding-bottom: 10px;
+}
+#sidebarFija ul li:hover {
+    border-bottom: 2px solid #ffffff;
 }
 .fotoPerfil {
     height: 170px;
@@ -60,6 +68,9 @@ ul{
     margin-top: 15px;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
+}
+.dropdown {
+    display: none;
 }
 .map{
     margin-top: 20px;
@@ -83,20 +94,34 @@ ul{
     display: inline-block;
     list-style: none;
     text-decoration: none;
-    margin: 0 50px;
-    border-bottom: 2px solid transparent;
+    color: #000;
+    margin: 0 30px;
+    border: 2px solid #000;
+    padding: 10px 45px;
+    border-radius: 10%;
 }
 .lista-main a:hover {
-    border-bottom: 2px solid #000000;
+    background: #343a40;
+    color: #fff;
 }
 .band-card {
     border: 2px solid grey;
     margin: 20px 0;
     padding: 20px 0;
 }
+.band-card .cards-profile {
+    text-align: center;
+}
 .boton-cards {
     margin-top: 10px;
 }
+textarea {
+    width: 325px;
+    min-height: 120px;
+    max-height: 120px;
+    border-radius: 10px;
+}
+
 /*Aside*/
 .div-aside {
     border: solid 2px grey;
@@ -114,9 +139,27 @@ ul{
 }
 .bands {
     border: 1px solid grey;
+    margin: 10px 0px;
+    padding: 20px 0px;
+}
+.div-aside .banda1 img {
+    margin-left: 20px;
+}
+.div-aside .banda1 span {
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 70px;
+}
+.bands i {
+    margin-right: 10px;
+    float: right;
+    font-size: 30px;
+}
+h6 {
+    margin: 10px 0px;
+    font-size: 25px;
     text-align: center;
 }
-
 
 /*Footer*/
 footer {
@@ -134,26 +177,65 @@ footer {
 }
 
 /* Media Queries*/
-/* Navbar */
-@media only screen and (max-width: 720px) { 
+@media only screen and (max-width: 960px) { 
+
+    /* Navbar */
     .lista li a {
-        margin: 5px 0;
+        margin: 5px auto;
         font-size: 20px;
+        width: 100%;
+    }
+    .form-inline {
+        margin: 5px auto;
     }
     .form-inline button {
         margin-top: 10px;
+        width: 100%;
     }
-}
 
-/* Main */
-@media only screen and (max-width: 720px) { 
+    /* Main */
+    #sidebarFija ul {
+        display: none;
+    }
+    #sidebarFija .dropdown {
+        margin: 20px auto;
+        display: block;
+    }
+    #sidebarFija .map {
+        display: none;
+    }
+    .lista-main a {
+        color: #000;
+        margin: 0 10px;
+        border: 2px solid #000;
+        padding: 10px 30px;
+        border-radius: 10%;
+    }
+    .lista-main a:hover {
+        background: #343a40;
+        color: #fff;
+    }
+    .container-main .band-card .card-1,
+    .card-2, .card-3 {
+        margin: 0px 5px;
+    }
     .container-main, .div-aside {
         margin: 10px 0px 10px 0px;
     }
-}
 
-/* Footer */
-@media only screen and (max-width: 720px) { 
+    /* Aside */
+    .div-aside .banda1 span { 
+        margin-left: 50px;
+    }
+    .div-aside .bands img {
+        display: block;
+        margin: auto;
+    }
+    .div-aside .bands i {
+        margin-right: 30px;
+    }
+
+    /* Footer */
     .social-icons {
         justify-content: center;
     }

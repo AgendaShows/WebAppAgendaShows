@@ -30,10 +30,13 @@ label {
     font-size: 35px;
 }
 .container-form {
-    margin: 40px auto;
+    margin: 5px auto;
     padding: 20px 30px;
     width: 48%;
     text-align: center;
+}
+.dropdown {
+    margin-top: 20px;
 }
 
 /*Media Queries*/

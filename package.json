@@ -4,7 +4,7 @@
   "description": "- HTML5\r - BOOTSTRAP\r - CSS3\r - JAVASCRIPT",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,10 +19,14 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.1",
     "mongoose": "^5.10.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header */
+.logoNombre{
+    display: flex;
+    align-items: center;
+    margin-left: 19px;
+}
+.logotipo{
+    font-size:25px;
+    color: white;
+    margin-right:10px;
+    margin-left:10px;   
+}
+.navbar-brand{
+    padding-left: 5px;
+    font-size: 25px;
+}
+#barraDeNavegacion {
+    padding-left: 30px;
+}
+.lista {
+    border: none;
+}
+.lista li {
+    display: flex;
+}
+.lista li a {
+    font-size: 20px;
+}
+.form-inline {
+    margin-right: 40px;
+}
+/* Header */
+
+/* Section */
+.container-right {
+    border: 1px solid black;
+    margin: 20px 60px;
+}
+.nombre-banda {
+    margin: 15px 0;
+    padding: 10px 10px;
+}
+.titulo-banda{
+    padding: 20px 0px;
+    text-align: center;
+}
+.info-medios {
+    margin: 10px 0;
+    padding: 15px 15px;
+}
+.info-banda {
+    margin: 20px 0;
+}
+.container-left {
+    border: 1px solid black;
+    margin: 20px 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #393e46;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+  }
+/* 04BFBF */
+.container-footer {
+    padding-top: 7px;
+}
+.container-footer .social-icons a {
+    margin-left: 20px;
+}
+  
+
+/* Media Queries*/
+@media only screen and (max-width: 960px) { 
+
+    /* Navbar */
+    .lista li a {
+        margin: 5px auto;
+        font-size: 20px;
+        width: 100%;
+    }
+    .form-inline {
+        margin: 5px auto;
+    }
+    .form-inline button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /* Footer */
+    .social-icons {
+        justify-content: center;
+    }
+}

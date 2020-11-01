@@ -10,6 +10,7 @@
 
 // Modulos requeridos
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
 const connectWithMongo = require("./config/db"); // Llamo a la configuracion de conexion a la DB
@@ -28,6 +29,7 @@ const publicDirectory = path.join(__dirname, "../public/");
 const PORT = process.env.PORT || 3000; 
 
 //Middleware
+app.use(cors());
 app.use(express.static(publicDirectory));
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended: true}));

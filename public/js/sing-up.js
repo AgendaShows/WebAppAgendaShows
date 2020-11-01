@@ -23,6 +23,26 @@ class UI {
     }
 }
 
+if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function (callback, thisArg) {
+        thisArg = thisArg || window;
+        for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this);
+        }
+    };
+}
+
+//Funcion que guarda mi seleccion
+var dropdownValue = null; 
+let options = document.querySelectorAll(".selection");
+options.forEach( function (element) {
+    element.addEventListener("click", (e) => {
+        e.preventDefault();
+        dropdownValue = e.target.text;
+    }, false);
+})
+
+
 // Funcion de envio
 registrate = (e) => {
     e.preventDefault();
@@ -34,7 +54,8 @@ registrate = (e) => {
         nombre: document.getElementById("nombre").value,
         apellido: document.getElementById("apellido").value,
         email: document.getElementById("email").value,
-        password: document.getElementById("password").value
+        password: document.getElementById("password").value,
+        estilo: dropdownValue
     };
 
     if (form.nombre === '', form.apellido === '', form.email === '', form.password === ''){

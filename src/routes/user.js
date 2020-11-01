@@ -1,6 +1,6 @@
 // Modulos 
 const express = require('express');
-const {check, resultadoValidacion} = require("express-validator/check");
+const {check} = require("express-validator/check");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
@@ -8,23 +8,25 @@ const router = express.Router();
 // Requiero la carpeta de modelos y la guardo en una constante
 const User = require("../models/Users");
 const auth = require("../middleware/autenticacion");
+const userId = require("../middleware/userId");
 
 /**********************
  * POST 
  * Registro de Usuario
  **********************/
-
 router.post( "/singup", [
         check("nombre", "Por favor, ingrese un nombre").not().isEmpty(),
         check("apellido", "Por favor, ingrese un apellido").not().isEmpty(),
         check("email", "Por favor, ingrese un email").isEmail(),
-        check("password", "Ingrese una contraseña valida").isLength({min: 6})
+        check("password", "Ingrese una contraseña valida").isLength({min: 6}),
+        check("estilo", "Por favor, seleccione un estilo").not().isEmpty()
     ], async (req, res) => {
 
         // Requiero la data que se pone en los inputs
-        const {nombre, apellido, email, password } = req.body;
+        const {nombre, apellido, email, password, estilo } = req.body;
 
         try {
+
             // Declaro una variable llamada usuario que va a buscar de acuerdo al email
             let user = await User.findOne({
                 email
@@ -45,7 +47,8 @@ router.post( "/singup", [
                 nombre,
                 apellido,
                 email,
-                password
+                password,
+                estilo
             });
 
             const salt = await bcrypt.genSalt(10);
@@ -76,8 +79,6 @@ router.post( "/singup", [
         }
     }
 );
-
-module.exports = router;
 
 /**********************
  * POST 
@@ -137,10 +138,37 @@ router.post("/login", [
  });
 
  /**********************
+ * UPDATE User 
+ **********************/
+
+ router.put("update/:id", userId, (req, res) => {
+    
+ });
+
+ /**********************
+ * GET Users 
+ * Get Users by ID 
+ **********************/
+
+ router.get("/all", async (req,res) => {
+    try {
+        const users = await User.find()
+        res.json(users)
+    } catch (error) {
+        res.status(500).json({
+            mensaje: error.mensaje
+        });
+    }
+ });
+
+ router.get("/:id", userId, (req, res) => {
+    res.json(res.user);
+ });
+
+ /**********************
  * GET 
  * Login de Usuario
  **********************/
-
  router.get("/me", auth, async (req,res) => {
     try {
         const user = await User.findById(req.user.id);
@@ -151,3 +179,5 @@ router.post("/login", [
         });
     }
  });
+
+ module.exports = router;

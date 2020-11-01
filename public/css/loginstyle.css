@@ -74,14 +74,12 @@ label {
 }
 
 @media only screen and (max-width: 600px) {
-  span {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
   .container-form , .container-redes {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  span {
+    font-size: 18px;
   }
 }

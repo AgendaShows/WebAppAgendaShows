@@ -22,6 +22,9 @@ const UserSchema = mongoose.Schema ({
     creado: {
         type: Date,
         default: Date.now()
+    },
+    estilo: {
+        type: String
     } 
 }, {
     collection: 'Users'
