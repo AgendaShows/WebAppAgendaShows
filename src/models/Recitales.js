@@ -11,6 +11,18 @@ const recitalesSchema = mongoose.Schema ({
         type: String,
         required: true
     },
+    nombreBanda: {
+        type: String,
+        required: true
+    },
+    imgBanda: {
+        type: String,
+        required: true
+    },
+    ubicacion: {
+        type: String,
+        required: true
+    },
     descripcion: {
         type: String,
         required: true

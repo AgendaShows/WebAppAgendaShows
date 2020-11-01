@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const mongoURL = "mongodb+srv://root:2208Mega.@cluster0.lxbo6.mongodb.net/WebAppAgendaShowsTest";
 
 // Conecto con Mongo declarando una funcion
-const connectWithMongo = () => {
+const connectMongo = () => {
     mongoose.connect(mongoURL,{ 
         useFindAndModify: false,
         useNewUrlParser: true,  
@@ -18,4 +18,4 @@ const connectWithMongo = () => {
   };
 
   // Exporto mi funcion para requerirla desde otro lado
-module.exports = connectWithMongo;
+module.exports = connectMongo;

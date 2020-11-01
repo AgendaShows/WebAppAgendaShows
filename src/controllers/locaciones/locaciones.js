@@ -1,0 +1,1 @@
+const locacionesService = require('../../services/locaciones');

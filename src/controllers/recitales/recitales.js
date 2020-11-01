@@ -1,0 +1,1 @@
+const recitalesService = require('../../services/recitales');
