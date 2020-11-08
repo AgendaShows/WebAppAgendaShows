@@ -1,8 +1,9 @@
 // Requiero a Mongoose
 const mongoose = require('mongoose');
+require('dotenv/config')
 
 // Declaro la URL de mi DB
-const mongoURL = "mongodb+srv://root:2208Mega.@cluster0.lxbo6.mongodb.net/WebAppAgendaShowsTest";
+const mongoURL = process.env.DB_CONNECTION;
 
 // Conecto con Mongo declarando una funcion
 const connectMongo = () => {
@@ -17,5 +18,4 @@ const connectMongo = () => {
     );
   };
 
-  // Exporto mi funcion para requerirla desde otro lado
 module.exports = connectMongo;
