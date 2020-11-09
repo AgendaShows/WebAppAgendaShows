@@ -94,4 +94,4 @@ const getBandaByNombre = async (req,res) => {
     }
 };
 
-module.exports = {getBandas, getBandaById, postBanda, patchBanda: updateBanda, getBandaByNombre};
+module.exports = {getBandas, getBandaById, postBanda, updateBanda, getBandaByNombre};
