@@ -1,9 +1,10 @@
 {
   "name": "webappagendashows",
-  "version": "1.1.0",
+  "version": "2.1.0",
   "description": "- HTML5\r - BOOTSTRAP\r - CSS3\r - JAVASCRIPT",
   "main": "server.js",
   "scripts": {
+    "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },
   "repository": {
@@ -20,6 +21,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
     "jsonwebtoken": "^8.5.1",
@@ -27,6 +29,7 @@
     "mongoose": "^5.10.3"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.4"
   }
 }
