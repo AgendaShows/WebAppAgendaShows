@@ -9,7 +9,7 @@ const bandasController = require('../controllers/bandasController');
 router.post('/crearBanda', bandasController.postBanda);
 router.get('/obtenerBandas', bandasController.getBandas);
 router.get('/obtenerBanda/:id', bandasController.getBandaById);
-router.put('/updateBanda/:id', bandasController.patchBanda);
+router.put('/updateBanda/:id', bandasController.updateBanda);
 router.get('/obtenerBandaPorNombre/:nombre', bandasController.getBandaByNombre);
 
 
