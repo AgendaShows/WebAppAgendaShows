@@ -8,6 +8,7 @@ require('dotenv/config');
 
 //* Importaciones
 const connectMongo = require("./database/db");
+// const logs = require('./utils/logger');
 const apiRoutes = require('./router');
 
 
@@ -29,7 +30,6 @@ app.use(express.json());
 
 //* Rutas
 apiRoutes(app);
-
 
 //* Server Listen
 app.listen(PORT, (req,res) => {

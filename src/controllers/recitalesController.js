@@ -28,12 +28,6 @@ const getRecitalById = async (req,res) => {
 
 const postRecital = async (req,res) => {
 
-    if (!req.body) {
-        res.status(400).json({
-            message: "No puede enviar contenido vacio"
-        });
-    }
-    
     const crearRecital = new Recitales({
         fechaRecital: req.body.fechaRecital,
         titulo: req.body.titulo,
@@ -79,4 +73,17 @@ const updateRecital = async (req,res) => {
     }
 };
 
-module.exports = {getRecitales, getRecitalById, postRecital, updateRecital};
+const getRecitalPorFecha = async (req,res) => {
+
+    let fechasOrdenadas = {fechaRecital: 1}
+    try {
+        fechasOrdenadas = await Recitales.find().sort(fechasOrdenadas);
+        res.json(fechasOrdenadas);
+    } catch (error) {
+        res.status(500).json({
+            message : error.message
+        });
+    }
+};
+
+module.exports = {getRecitales, getRecitalById, postRecital, updateRecital, getRecitalPorFecha};
