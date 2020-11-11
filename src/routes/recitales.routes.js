@@ -10,5 +10,6 @@ router.post('/crearRecital', recitalesController.postRecital);
 router.get('/obtenerRecitales', recitalesController.getRecitales);
 router.get('/obtenerRecital/:id', recitalesController.getRecitalById);
 router.put('/updateRecital/:id', recitalesController.updateRecital);
+router.get('/obtenerRecitalPorFecha', recitalesController.getRecitalPorFecha);
 
 module.exports = router;

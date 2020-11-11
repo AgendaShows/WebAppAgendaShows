@@ -30,7 +30,6 @@ app.use(express.json());
 //* Rutas
 apiRoutes(app);
 
-
 //* Server Listen
 app.listen(PORT, (req,res) => {
     console.log(`Server iniciado en puerto ${PORT}`);
