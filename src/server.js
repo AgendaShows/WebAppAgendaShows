@@ -8,6 +8,7 @@ require('dotenv/config');
 
 //* Importaciones
 const connectMongo = require("./database/db");
+// const logs = require('./utils/logger');
 const apiRoutes = require('./router');
 
 

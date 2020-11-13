@@ -28,12 +28,6 @@ const getRecitalById = async (req,res) => {
 
 const postRecital = async (req,res) => {
 
-    if (!req.body) {
-        res.status(400).json({
-            message: "No puede enviar contenido vacio"
-        });
-    }
-    
     const crearRecital = new Recitales({
         fechaRecital: req.body.fechaRecital,
         titulo: req.body.titulo,
