@@ -20,7 +20,7 @@
 <body>
     <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-nav navbar-expand-xl navbar-dark bg-dark sticky-top">
+        <nav class="navbar navbar-nav navbar-expand-xl sticky-top">
             <!--Inserto imagen de nota musical a modo de logo-->
             <div class="logoNombre">
                 <a class="logotipo" href="#">
@@ -52,8 +52,7 @@
                     </li>
                 </ul>
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Introduci tu busqueda"
-                        aria-label="Search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Introduci tu busqueda" aria-label="Search">            
                     <button class="btn btn-warning my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </div>
@@ -64,8 +63,8 @@
     <section>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-lg-2 sidebar bg-dark" id="sidebarFija">
-                    <img src="img/FotoPerfil.jpg" alt="Foto de Perfil" class="fotoPerfil">
+                <div class="col-12 col-lg-2 sidebar" id="sidebarFija">
+                    <img src="img/profilePicture.jpg" alt="Foto de Perfil" class="fotoPerfil">
                     <ul>
                         <a href="#"><li>Mi Cuenta</li></a>
                         <a href="#"><li>Explorar</li></a>
@@ -89,7 +88,7 @@
                     <img src="img/Mapa.jpg" alt="MAPA" class="map">
                 </div>
                 <!--ACA TERMINA FUNCIONALIDAD NAV O SIDEBAR LAU-->
-                <div class="col-12 col-lg-5 container-main">
+                <div class="col-12 col-lg-5 container-main seccion-Recitales">
                     <ul class="lista-main">
                         <a href="#"><li>Hoy</li></a>
                         <a href="#"><li>Esta Semana</li></a>
@@ -98,12 +97,12 @@
                     <div class="col-12 band-card">
                         <div class="row">
                             <div class="col-12 col-lg-4 cards-profile">
-                                <img src="./img/FotoPerfil.jpg" alt="banda" height="100px" width="100px">
+                                <img src="./img/bandLogo.jpg" class=fotoBanda alt="banda" height="100px" width="100px">
                                 <h4>Metallica</h4>
                                 <p>Internacional</p>
                             </div>
-                            <div class="col-12 col-lg-8 card-1">
-                                <textarea name="descripcion" placeholder="Descripcion"></textarea>
+                            <div class="col-12 col-lg-8 cardsRecitales">
+                                <textarea name="descripcion" class="descripcion" placeholder="Descripcion"></textarea>
                                 <div class="row">
                                     <div class="col-4 boton-cards">
                                         <button type="button" class="btn btn-dark">MAS</button>
@@ -121,12 +120,12 @@
                     <div class="col-12 band-card">
                         <div class="row">
                             <div class="col-12 col-lg-4 cards-profile">
-                                <img src="./img/FotoPerfil.jpg" alt="banda" height="100px" width="100px">
+                                <img src="./img/bandLogo.jpg" class=fotoBanda alt="banda" height="100px" width="100px">
                                 <h4>Metallica</h4>
                                 <p>Internacional</p>
                             </div>
-                            <div class="col-12 col-lg-8 card-2">
-                                <textarea name="descripcion" placeholder="Descripcion"></textarea>
+                            <div class="col-12 col-lg-8 cardsRecitales">
+                                <textarea name="descripcion" class="descripcion" placeholder="Descripcion"></textarea>
                                 <div class="row">
                                     <div class="col-4 boton-cards">
                                         <button type="button" class="btn btn-dark">MAS</button>
@@ -144,12 +143,12 @@
                     <div class="col-12 band-card">
                         <div class="row">
                             <div class="col-12 col-lg-4 cards-profile">
-                                <img src="./img/FotoPerfil.jpg" alt="banda" height="100px" width="100px">
+                                <img src="./img/bandLogo.jpg" class=fotoBanda alt="banda" height="100px" width="100px">
                                 <h4>Metallica</h4>
                                 <p>Internacional</p>
                             </div>
-                            <div class="col-12 col-lg-8 card-3">
-                                <textarea name="descripcion" placeholder="Descripcion"></textarea>
+                            <div class="col-12 col-lg-8 cardsRecitales">
+                                <textarea name="descripcion" class="descripcion" placeholder="Descripcion"></textarea>
                                 <div class="row">
                                     <div class="col-4 boton-cards">
                                         <button type="button" class="btn btn-dark">MAS</button>
@@ -166,7 +165,7 @@
                     </div>
                 </div>
                 <!-- Aca empieza trabajo de Fede -->
-                <div class="col-12 col-lg-4 div-aside">
+                <div class="col-12 col-lg-4 div-aside destacados">
                     <div class="titulo-aside">
                         <i class="fas fa-arrow-down flecha"></i>
                         <span class="seccion">Destacados</span>
@@ -174,7 +173,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12 bands banda1">
-                            <img src="./img/FotoPerfil.jpg" alt="banda" height="120px" width="120px">
+                            <img src="./img/bandLogo.jpg" class=imagen alt="banda" height="120px" width="120px">
                             <a href="#"><i class="fas fa-search-dollar"></i></a> 
                             <h6>Banda 1</h6>
                             <span>12/12/2020</span>
@@ -183,22 +182,22 @@
                     </div>
                     <div class="row">
                         <div class="col-12 col-lg-6 bands banda2">
-                            <img src="./img/FotoPerfil.jpg" class="imagen" alt="banda" height="120px" width="120px">
+                            <img src="./img/bandLogo.jpg" class="imagen" alt="banda" height="120px" width="120px">
                             <a href="#"><i class="fas fa-search-dollar"></i></a> 
                             <h6>Banda 2</h6>
                         </div>
                         <div class="col-12 col-lg-6 bands banda3">
-                            <img src="./img/FotoPerfil.jpg" class="imagen" alt="banda" height="120px" width="120px">
+                            <img src="./img/bandLogo.jpg" class="imagen" alt="banda" height="120px" width="120px">
                             <a href="#"><i class="fas fa-search-dollar"></i></a> 
                             <h6>Banda 3</h6>
                         </div>
                         <div class="col-12 col-lg-6 bands banda4">
-                            <img src="./img/FotoPerfil.jpg" class="imagen" alt="banda" height="120px" width="120px">
+                            <img src="./img/bandLogo.jpg" class="imagen" alt="banda" height="120px" width="120px">
                             <a href="#"><i class="fas fa-search-dollar"></i></a> 
                             <h6>Banda 4</h6>
                         </div>
                         <div class="col-12 col-lg-6 bands banda5">
-                            <img src="./img/FotoPerfil.jpg" class="imagen" alt="banda" height="120px" width="120px">
+                            <img src="./img/bandLogo.jpg" class="imagen" alt="banda" height="120px" width="120px">
                             <a href="#"><i class="fas fa-search-dollar"></i></a> 
                             <h6>Banda 5</h6>
                         </div>
