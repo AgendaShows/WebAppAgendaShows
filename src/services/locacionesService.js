@@ -7,3 +7,6 @@ exports.getLocacionById = async (id) => {
 exports.getLocaciones = async () => {
     return await Locaciones.find();
 }
+exports.getLocacionByNombre = async (req, res) => {
+    return await Locaciones.find(req);
+}

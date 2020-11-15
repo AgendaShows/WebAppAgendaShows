@@ -1,9 +1,10 @@
 const Recitales = require('../models/Recitales');
+const recitalesService = require('../services/recitalesService');
 
-const getRecitales = async (req,res) => {
+const getRecitales = async (req, res) => {
 
     try {
-        const recitales = await Recitales.find()
+        const recitales = await recitalesService.getRecitales();
         res.json(recitales)
     } catch (error) {
         res.status(500).json({
@@ -12,12 +13,12 @@ const getRecitales = async (req,res) => {
     }
 };
 
-const getRecitalById = async (req,res) => {
+const getRecitalById = async (req, res) => {
 
     //Declaro una variable que contendra un id
     let recital;
     try {
-        recital = await Recitales.findById(req.params.id);
+        recital = await recitalesService.getRecitalyId(req.params.id);
         res.json(recital)
     } catch (error) {
         return res.status(500).json({
@@ -26,7 +27,7 @@ const getRecitalById = async (req,res) => {
     }
 };
 
-const postRecital = async (req,res) => {
+const postRecital = async (req, res) => {
 
     const crearRecital = new Recitales({
         fechaRecital: req.body.fechaRecital,
@@ -52,7 +53,7 @@ const postRecital = async (req,res) => {
     }
 };
 
-const updateRecital = async (req,res) => {
+const updateRecital = async (req, res) => {
 
     if (req.body == null) {
         res.status(400).json({
@@ -60,10 +61,10 @@ const updateRecital = async (req,res) => {
         });
     }
 
-    let recital; 
+    let recital;
     try {
-        recital = await Recitales.findByIdAndUpdate(req.params.id, req.body, {useFindAndModify: false})
-        res.send ({
+        recital = await Recitales.findByIdAndUpdate(req.params.id, req.body, { useFindAndModify: false })
+        res.send({
             message: "Recital actualizado"
         })
     } catch (error) {
@@ -73,17 +74,17 @@ const updateRecital = async (req,res) => {
     }
 };
 
-const getRecitalPorFecha = async (req,res) => {
+const getRecitalPorFecha = async (req, res) => {
 
-    let fechasOrdenadas = {fechaRecital: 1}
+    let fechasOrdenadas = { fechaRecital: 1 }
     try {
         fechasOrdenadas = await Recitales.find().sort(fechasOrdenadas);
         res.json(fechasOrdenadas);
     } catch (error) {
         res.status(500).json({
-            message : error.message
+            message: error.message
         });
     }
 };
 
-module.exports = {getRecitales, getRecitalById, postRecital, updateRecital, getRecitalPorFecha};
+module.exports = { getRecitales, getRecitalById, postRecital, updateRecital, getRecitalPorFecha };
