@@ -36,7 +36,7 @@ const recitalesSchema = mongoose.Schema ({
         required: true
     },
     tipoRecital: {
-        type: Array,
+        type: String,
         required: true
     }
 }, {
