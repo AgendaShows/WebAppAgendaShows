@@ -31,6 +31,10 @@ const bandasSchema = mongoose.Schema({
     spotify: {
         type: String,
         required: true
+    },
+    imgBanda: {
+        type: String,
+        required: true
     }
 }, {
     collection: 'Bandas'
