@@ -19,6 +19,10 @@ const recitalesSchema = mongoose.Schema ({
         type: String,
         required: true
     },
+    bannerRecital: {
+        type: String,
+        required: true
+    },
     ubicacion: {
         type: String,
         required: true
