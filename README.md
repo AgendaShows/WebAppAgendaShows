@@ -41,6 +41,7 @@ _Endpoints para las pruebas:_
 /api/obtenerRecitalById/:id
 /api/crearRecital
 /api/updateRecital/:id
+/api/obtenerFullRecital/:id
 ```
 
 ---
