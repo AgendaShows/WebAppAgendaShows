@@ -35,7 +35,12 @@ const bandasSchema = mongoose.Schema({
     imgBanda: {
         type: String,
         required: true
-    }
+    },
+    videoDemo: {
+        type: String,
+        required: true
+    },
+    carousel: [],
 }, {
     collection: 'Bandas'
 });
